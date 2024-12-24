@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy New Year 2025!</title>
+   <style> {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #2c3e50;
+    color: white;
+    overflow: hidden;
+    text-align: center;
+    animation: backgroundChange 3s infinite alternate;
+}
+
+.container {
+    position: relative;
+    z-index: 10;
+}
+
+h1 {
+    font-size: 4em;
+    color: #ff6347;
+    animation: fadeIn 2s ease-out, bounce 1s ease infinite;
+}
+
+.message {
+    font-size: 1.8em;
+    color: #f0e68c;
+    margin-top: 20px;
+    animation: slideIn 2s ease-out;
+}
+
+.user-form {
+    margin-top: 20px;
+}
+
+.user-form input {
+    padding: 10px;
+    font-size: 1.2em;
+    margin-right: 10px;
+    border: 2px solid #ff6347;
+    border-radius: 5px;
+    color: #222;
+}
+
+.user-form button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #ff6347;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.user-form button:hover {
+    background-color: #e55347;
+}
+
+.greeting {
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: #f0e68c;
+}
+
+.created-by {
+    font-size: 1.2em;
+    color: #fff;
+    margin-top: 20px;
+    animation: fadeIn 2s ease-out;
+}
+
+#lyrics {
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: #ff0;
+    animation: slideIn 2s ease-out;
+}
+
+.firework, .firework-2, .firework-3, .firework-4 {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: #ff6347;
+    border-radius: 50%;
+    opacity: 0;
+    animation: fireworkAnimation 2s infinite;
+}
+
+.firework {
+    animation-delay: 1s;
+    top: 20%;
+    left: 30%;
+    background-color: #ff0;
+}
+
+.firework-2 {
+    animation-delay: 0s;
+    top: 30%;
+    left: 70%;
+    background-color: #f0e68c;
+}
+
+.firework-3 {
+    animation-delay: 2s;
+    top: 40%;
+    left: 25%;
+    background-color: #ff1493;
+}
+
+.firework-4 {
+    animation-delay: 1.5s;
+    top: 50%;
+    left: 60%;
+    background-color: #00fa9a;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes backgroundChange {
+    0% {
+        background-color: #2c3e50;
+    }
+    100% {
+        background-color: #34495e;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fireworkAnimation {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.5);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+}</style>
+</head>
+<body>
+    <!-- Audio element to play Happy New Year song on page load -->
+    <audio id="audio-player" autoplay loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="container">
+        <h1 id="year-heading">🎉 Happy New Year <span id="year">2025</span>!</h1>
+        <p id="message">Goodbye 2024, welcome 2025!</p>
+  <p id="message">love you >3</p>
+  
+
+        <div id="greeting" class="greeting">
+            <p>Happy New Year!</p>
+            <p>wishing for you all the best!</p>
+        </div>
+
+        <p class="created-by">Created by: Sedyka Mansour Elbatran</p>
+
+        <!-- Fireworks -->
+        <div class="firework"></div>
+        <div class="firework-2"></div>
+        <div class="firework-3"></div>
+        <div class="firework-4"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
